@@ -1,0 +1,414 @@
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+        3.2 Other
+    4. Areas
+        4.1 Header
+        4.2 Introduction
+        etc.
+    5. Media Queries
+////////////////////////*/
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Kleuren
+Paars #5722CD;
+Blauw #4845E4;
+Roze #ED4385;
+Zwart #0C0C0C;
+Lichtpaars #F2F0FF;
+
+Voor de grote zwevende woorden, zoals "hello" en "services"
+Uitzonderingen:
+Lichtgrijs #F3F6F9 (voor de achtergrond van de projecten)
+Grijs #7A7A7A (voor de service-tegel tekst)
+*/
+
+:root {
+    --paars: #5722CD;
+    --blauw: #4845E4;
+    --roze: #ED4385;
+    --zwart: #0C0C0C;
+    --lichtpaars: #F2F0FF;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Merriweather', serif;
+}
+
+/* ------------------------------- 2. Typography ----------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', serif;
+}
+
+.text-section-4 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.card-heading {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    min-height: 50px;
+}
+
+.card-paragraph {
+    color: #7A7A7A;
+    font-size: 12px;
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+
+/* --------------- 3.1 Reusables ----------------------- */
+
+img {
+    max-width: 100%;
+}
+
+.image-header {
+    display: block;
+    margin: auto;
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+}
+
+.section-button {
+    display: block;
+    background-color: #ED4385;
+    text-transform: uppercase;
+    color: white;
+    border: none;
+    font-size: 10px;
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 15px auto;
+}
+
+/* --------------- 3.2 Other --------------------------- */
+
+main {
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: whitesmoke;
+    position: relative;
+}
+
+.section-1-link {
+    color: #5722CD;
+}
+
+.article-section-link {
+    text-decoration: none;
+    color: #5722CD;
+    font-weight: bold;
+    position: relative;
+}
+
+.article-section-link::after {
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    margin-left: 10px;
+    width: 10px;
+    height: 2px;
+    background-color: #5722CD;
+    transition: width 0.4s ease;
+}
+
+.article-section-link:hover::after {
+    width: 40px;
+}
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+
+/* --------------- 4.1 Header ------------------------- */
+
+header {
+    background: #4845E4;
+    background: linear-gradient(154deg, rgba(72, 69, 228, 1) 0%, rgba(87, 34, 205, 1) 78%);
+    color: white;
+    position: relative;
+}
+
+.navbar-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    list-style: none;
+    padding: 20px;
+    gap: 20px;
+}
+
+.navbar-list-items {
+    list-style: none;
+    display: flex;
+    color: white;
+    text-decoration: none;
+}
+
+.button-header {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-family: 'Roboto', serif;
+    padding: 0.75rem 1rem;
+    background-color: #ED4385;
+    color: white;
+    border-radius: 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* --------------- 4.2 Introduction ------------------- */
+
+.hero {
+    text-align: center;
+    padding: 100px 500px 100px 500px;
+}
+
+.first-section {
+    background-color: white;
+    position: relative;
+    z-index: 0;
+}
+
+.first-section::before {
+    content: "hello";
+    font-weight: bold;
+    position: absolute;
+    color: #F2F0FF;
+    font-size: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.section-1 {
+    color: #5722CD;
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+    padding: 50px 0 50px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.section-1-last-line {
+    color: black;
+}
+
+.section-2 {
+    background-color: #F3F6F9;
+    width: 100%;
+    position: relative;
+    z-index: 0;
+    overflow: visible;
+}
+
+.section-2::before {
+    content: "work";
+    position: absolute;
+    font-weight: bold;
+    color: white;
+    font-size: 300px;
+    top: 175px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.section-2-box {
+    padding: 150px 100px 100px 100px;
+    position: relative;
+    z-index: 2;
+}
+
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 100px 20px 20px 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    padding: 30px 30px 30px 30px;
+    color: #5722CD;
+    border: 1.5px #5722CD solid;
+    aspect-ratio: 1/1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-image {
+    width: 80px;
+    height: auto;
+    display: block;
+    flex-shrink: 0;
+}
+
+.section-3 {
+    background-color: white;
+    color: #7A7A7A;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    z-index: 0;
+}
+
+.section-3::before {
+    content: "services";
+    position: absolute;
+    color: #F2F0FF;
+    font-size: 300px;
+    top: -40%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    z-index: 1;
+}
+
+.article-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: start;
+    color: black;
+    padding: 30px 0 30px 0px;
+    position: relative;
+}
+
+.article-section:nth-child(even) {
+    flex-direction: row-reverse;
+    gap: 50px;
+}
+
+.section-4 {
+    background: #4845E4;
+    background: linear-gradient(154deg, rgba(72, 69, 228, 1) 0%, rgba(87, 34, 205, 1) 78%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 100px 30px 20px 20px;
+    position: relative;
+}
+
+.section-4 input[type="text"],
+.section-4 input[type="email"] {
+    height: 40px;
+    width: 750px;
+    border: none;
+    border-radius: 2px;
+    margin-top: 8px;
+}
+
+.section-4 textarea {
+    border: none;
+    border-radius: 2px;
+    height: 200px;
+    width: 750px;
+    margin-top: 8px;
+    resize: none;
+}
+
+.section-4 fieldset {
+    border: none;
+}
+
+.legend-section {
+    text-align: center;
+}
+
+footer {
+    background: black;
+    color: white;
+    padding: 10px;
+}
+
+.footer-text {
+    text-align: center;
+}
+
+.triangle-divider-2 {
+    width: 0;
+    height: 0;
+    border-right: 100vw solid white;
+    border-bottom: 100px solid transparent;
+}
+
+
+.triangle-divider {
+    width: 0;
+    height: 0;
+    border-left: 100vw solid white;
+    border-top: 100px solid transparent;
+}
+
+
+.triangle-divider-3 {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+}
+
+.triangle-divider-3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(154deg, rgba(72, 69, 228, 1) 0%, rgba(87, 34, 205, 1) 78%);
+    clip-path: polygon(0 0, 100% 100%, 0% 100%);
+    border-right: 100vw solid #4845E4; /* of rgba(...) zoals in gradient-start */
+    border-bottom: 100px solid transparent;
+}
+
+/* ------------------------------- 5. Media Queries -------------------------------- */
+
+@media (max-width: 768px) {
+    .navbar-list {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .section-4 input,
+    .section-4 textarea {
+        width: 100%;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
