@@ -1,1 +1,25 @@
 /.idea
+
+De links in de navigatiebalk linken naar hun bijbehorende gebied op de homepagina: dit noem je een jumplink. Dus als de gebruiker op "Contact Us" klikt, krijgt hij het contact-formulier-gedeelte van de homepagina te zien. Hoe je dit implementeert, kun je nalezen op EdHub (Hfst. 5.3) onder het kopje "ID selectors".
+
+
+Het services-blok is een mooi voorbeeld van een flexbox-container, waarin je de tegels een basis-breedte kunt geven met de flex-basis-property. Denk er aan of de tegels mogen meegroeien of mee krimpen wanneer de schermgrootte zich aanpast.
+
+css aanvullen met de ///**
+
+achtergrond help watermerk goed krijgen
+
+placeholder nog stylen
+
+
+De lijnen onder de project-titels wil je invoegen als een pseudo-element. Dit doe je door de afbeeldingen door middel van de background-image-property op een pseudo-element te plaatsen. Op deze manier vervuil je de HTML niet met "nutteloze" elementen.
+
+
+Schermontwerpen
+Basisontwerp
+De screenshots zijn erg groot. Download de screenshots om ze te bekijken:
+
+Desktop design
+Mobiel design
+
+
